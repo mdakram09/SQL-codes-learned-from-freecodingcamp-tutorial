@@ -16,6 +16,8 @@ SELECT COUNT(sex), sex
 FROM employee
 GROUP BY sex
 
+
+
 -- Find the total sales of each salesman
 SELECT SUM(total_sales), emp_id
 FROM works_with
