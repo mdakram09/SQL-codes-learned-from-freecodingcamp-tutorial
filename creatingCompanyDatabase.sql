@@ -40,9 +40,13 @@ CREATE TABLE works_with (
   client_id INT,
   total_sales INT,
   PRIMARY KEY(emp_id, client_id),
-  FOREIGN KEY(emp_id) REFERENCES employee(emp_id) ON DELETE CASCADE,
+  FOREIGN KEY(emp_id) REFERENCES employee(emp_id) ON DELETE CASCADE,  --A foreign key with cascade delete means that if a record in the parent table is deleted, then the corresponding records in the child table will automatically be deleted. This is called a cascade delete in SQL Server.
+                                                                      --A foreign key with cascade delete can be created using either a CREATE TABLE statement or an ALTER TABLE statement.
   FOREIGN KEY(client_id) REFERENCES client(client_id) ON DELETE CASCADE
 );
+
+
+
 
 CREATE TABLE branch_supplier (
   branch_id INT,
